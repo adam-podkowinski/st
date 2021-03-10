@@ -5,8 +5,8 @@
  *
  * font: see http://freedesktop.org/software/fontconfig/fontconfig-user.html
  */
-static char *font = "FiraCode Nerd Font:pixelsize=15:antialias=true:autohint=true";
-static char *font2[] = {"PowerlineSymbols:pixelsize=15:antialias=true",
+static char *font = "JetBrainsMono Nerd Font:pixelsize=15:antialias=true:autohint=true";
+static char *font2[] = {"Hack Nerd Font:style=Medium:pixelsize=15",
       		 	"Noto Color Emoji:pixelsize=10:antialias=true:autohint=true" };
 
 static int borderpx = 3;
