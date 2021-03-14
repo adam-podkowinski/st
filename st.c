@@ -29,6 +29,7 @@
 #endif
 
 /* Arbitrary sizes */
+#define HISTSIZE      10000
 #define UTF_INVALID   0xFFFD
 #define UTF_SIZ       4
 #define ESC_BUF_SIZ   (128*UTF_SIZ)

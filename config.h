@@ -5,11 +5,11 @@
  *
  * font: see http://freedesktop.org/software/fontconfig/fontconfig-user.html
  */
-static char *font = "JetBrainsMono Nerd Font:pixelsize=15:antialias=true:autohint=true";
-static char *font2[] = {"Hack Nerd Font:style=Medium:pixelsize=15",
+static char *font = "FiraCode Nerd Font:pixelsize=14.5:antialias=true:autohint=true";
+static char *font2[] = {"Hack Nerd Font:style=Medium:pixelsize=14.5",
       		 	"Noto Color Emoji:pixelsize=10:antialias=true:autohint=true" };
 
-static int borderpx = 3;
+static int borderpx = 4;
 
 /*
  * What program is execed by st depends of these precedence rules:
