@@ -6,8 +6,11 @@
  * font: see http://freedesktop.org/software/fontconfig/fontconfig-user.html
  */
 static char *font = "JetBrainsMono Nerd Font:pixelsize=14.5:antialias=true:autohint=true";
-static char *font2[] = {"Hack Nerd Font:style=Medium:pixelsize=14.5",
-      		 	"Noto Color Emoji:pixelsize=10:antialias=true:autohint=true" };
+static char *font2[] = {
+  "Hack:style=Regular:pixelsize=14.5:antialias=true:autohint=true",
+  "DejaVu Sans Mono for Powerline:pixelsize=14.5:antialias=true:autohint=true",
+  "Hack Nerd Font:style=Medium:pixelsize=14.5:antialias=true:autohint=true",
+  "Noto Color Emoji:pixelsize=11:antialias=true:autohint=true" };
 
 static int borderpx = 4;
 
