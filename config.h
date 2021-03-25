@@ -5,11 +5,11 @@
  *
  * font: see http://freedesktop.org/software/fontconfig/fontconfig-user.html
  */
-static char *font = "JetBrainsMono Nerd Font:pixelsize=14.5:antialias=true:autohint=true";
+static char *font = "FiraCode Nerd Font:pixelsize=14:antialias=true:autohint=true";
 static char *font2[] = {
-  "Hack:style=Regular:pixelsize=14.5:antialias=true:autohint=true",
-  "DejaVu Sans Mono for Powerline:pixelsize=14.5:antialias=true:autohint=true",
-  "Hack Nerd Font:style=Medium:pixelsize=14.5:antialias=true:autohint=true",
+  "Hack:style=Regular:pixelsize=14:antialias=true:autohint=true",
+  "DejaVu Sans Mono for Powerline:pixelsize=14:antialias=true:autohint=true",
+  "Hack Nerd Font:style=Medium:pixelsize=14:antialias=true:autohint=true",
   "Noto Color Emoji:pixelsize=11:antialias=true:autohint=true" };
 
 static int borderpx = 4;
@@ -112,7 +112,7 @@ char *termname = "st-256color";
 unsigned int tabspaces = 8;
 
 /* bg opacity */
-float alpha = 0.79;
+float alpha = 0.9;
 
 /* Terminal colors (16 first used in escape sequence) */
 static const char *colorname[] = {
@@ -513,7 +513,7 @@ static Key key[] = {
 	{ XK_F17,           XK_NO_MOD,      "\033[15;2~",    0,    0},
 	{ XK_F18,           XK_NO_MOD,      "\033[17;2~",    0,    0},
 	{ XK_F19,           XK_NO_MOD,      "\033[18;2~",    0,    0},
-	{ XK_F20,           XK_NO_MOD,      "\033[19;2~",    0,    0},
+  { XK_F20,           XK_NO_MOD,      "\033[19;2~",    0,    0},
 	{ XK_F21,           XK_NO_MOD,      "\033[20;2~",    0,    0},
 	{ XK_F22,           XK_NO_MOD,      "\033[21;2~",    0,    0},
 	{ XK_F23,           XK_NO_MOD,      "\033[23;2~",    0,    0},
@@ -529,6 +529,8 @@ static Key key[] = {
 	{ XK_F33,           XK_NO_MOD,      "\033[20;5~",    0,    0},
 	{ XK_F34,           XK_NO_MOD,      "\033[21;5~",    0,    0},
 	{ XK_F35,           XK_NO_MOD,      "\033[23;5~",    0,    0},
+  //I have my Cpas mapped to Pause key and then i map this code in vim to replace escape with caps
+	{ XK_Pause,         XK_NO_MOD,      "\033[29",       0,    0},
 };
 
 /*
