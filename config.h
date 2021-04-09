@@ -10,7 +10,7 @@ static char *font2[] = {
   "Hack:style=Regular:pixelsize=14:antialias=true:autohint=true",
   "DejaVu Sans Mono for Powerline:pixelsize=14:antialias=true:autohint=true",
   "Hack Nerd Font:style=Medium:pixelsize=14:antialias=true:autohint=true",
-  "Noto Color Emoji:pixelsize=11:antialias=true:autohint=true" };
+  "Noto Color Emoji:pixelsize=12:antialias=true:autohint=true" };
 
 static int borderpx = 4;
 
@@ -172,7 +172,7 @@ static unsigned int rows = 24;
 /*
  * Default colour and shape of the mouse cursor
  */
-static unsigned int mouseshape = XC_xterm;
+static unsigned int mouseshape = XC_left_ptr;
 static unsigned int mousefg = 7;
 static unsigned int mousebg = 0;
 
