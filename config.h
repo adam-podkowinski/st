@@ -12,7 +12,7 @@ static char *font2[] = {
   "Hack Nerd Font:style=Medium:pixelsize=14:antialias=true:autohint=true",
   "Noto Color Emoji:pixelsize=12:antialias=true:autohint=true" };
 
-static int borderpx = 4;
+static int borderpx = 6;
 
 /*
  * What program is execed by st depends of these precedence rules:
