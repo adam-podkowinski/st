@@ -5,7 +5,8 @@
  *
  * font: see http://freedesktop.org/software/fontconfig/fontconfig-user.html
  */
-static char *font = "FiraCode Nerd Font:style=Retina:pixelsize=14:antialias=true:autohint=true";
+//static char *font = "FiraCode Nerd Font:style=Retina:pixelsize=14:antialias=true:autohint=true";
+static char *font = "Cascadia Code:pixelsize=15:antialias=true:autohint=true";
 static char *font2[] = {
   "Hack:style=Regular:pixelsize=14:antialias=true:autohint=true",
   "DejaVu Sans Mono for Powerline:pixelsize=14:antialias=true:autohint=true",
@@ -112,7 +113,7 @@ char *termname = "st-256color";
 unsigned int tabspaces = 8;
 
 /* bg opacity */
-float alpha = 0.95;
+float alpha = 0.97;
 
 /* Terminal colors (16 first used in escape sequence) */
 static const char *colorname[] = {
