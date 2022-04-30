@@ -5,13 +5,10 @@
  *
  * font: see http://freedesktop.org/software/fontconfig/fontconfig-user.html
  */
-//static char *font = "FiraCode Nerd Font:style=Retina:pixelsize=14:antialias=true:autohint=true";
-static char *font = "Cascadia Code:pixelsize=15:antialias=true:autohint=true";
+static char *font = "JetBrainsMono Nerd Font Mono:weight=Medium:pixelsize=16:antialias=true:autohint=true";
 static char *font2[] = {
-  "Hack:style=Regular:pixelsize=14:antialias=true:autohint=true",
-  "DejaVu Sans Mono for Powerline:pixelsize=14:antialias=true:autohint=true",
-  "Hack Nerd Font:style=Medium:pixelsize=14:antialias=true:autohint=true",
-  "Noto Color Emoji:pixelsize=12:antialias=true:autohint=true" };
+  "Noto Color Emoji:pixelsize=12:antialias=true:autohint=true",
+};
 
 static int borderpx = 6;
 
@@ -33,8 +30,8 @@ char *stty_args = "stty raw pass8 nl -echo -iexten -cstopb 38400";
 char *vtiden = "\033[?6c";
 
 /* Kerning / character bounding-box multipliers */
-static float cwscale = 1.0;
-static float chscale = 1.45;
+static float cwscale = 1;
+static float chscale = 1.4;
 
 /*
  * word delimiter string
