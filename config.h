@@ -7,7 +7,7 @@
  */
 static char *font = "JetBrainsMono Nerd Font Mono:weight=Medium:pixelsize=16:antialias=true:autohint=true";
 static char *font2[] = {
-  "Noto Color Emoji:pixelsize=12:antialias=true:autohint=true",
+  "Noto Color Emoji:pixelsize=14:antialias=true:autohint=true",
 };
 
 static int borderpx = 6;
@@ -110,7 +110,8 @@ char *termname = "st-256color";
 unsigned int tabspaces = 8;
 
 /* bg opacity */
-float alpha = 0.98;
+//float alpha = 0.98;
+float alpha = 1.00;
 
 /* Terminal colors (16 first used in escape sequence) */
 static const char *colorname[] = {
