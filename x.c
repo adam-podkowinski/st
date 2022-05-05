@@ -1504,7 +1504,7 @@ xmakeglyphfontspecs(XftGlyphFontSpec *specs, const Glyph *glyphs, int len, int x
 }
 
 void
-xdrawglyphfontspecs(const XftGlyphFontSpec *specs, Glyph base, int len, int x, int y, int should_clear_whole_char)
+xdrawglyphfontspecs(const XftGlyphFontSpec *specs, Glyph base, int len, int x, int y, int clean_background)
 {
 	int charlen = len * ((base.mode & ATTR_WIDE) ? 2 : 1);
 	int winx = borderpx + x * win.cw, winy = borderpx + y * win.ch,
@@ -1613,10 +1613,8 @@ xdrawglyphfontspecs(const XftGlyphFontSpec *specs, Glyph base, int len, int x, i
   float char_y_offset = (win.ch - win.ch/chscale)/2;
 
 	/* Clean up the region we want to draw to. */
-  if (should_clear_whole_char == 1) {
+  if (clean_background == 1) {
 		XftDrawRect(xw.draw, bg, winx, winy, width, win.ch);
-  } else {
-		XftDrawRect(xw.draw, bg, winx, winy + char_y_offset, width, win.ch / chscale);
   }
 
 	/* Set the clip region because Xft is sometimes dirty. */
@@ -1649,13 +1647,13 @@ xdrawglyphfontspecs(const XftGlyphFontSpec *specs, Glyph base, int len, int x, i
 }
 
 void
-xdrawglyph(Glyph g, int x, int y, int should_clear_whole_char)
+xdrawglyph(Glyph g, int x, int y, int clean_background)
 {
 	int numspecs;
 	XftGlyphFontSpec spec;
 
 	numspecs = xmakeglyphfontspecs(&spec, &g, 1, x, y);
-	xdrawglyphfontspecs(&spec, g, numspecs, x, y, should_clear_whole_char);
+	xdrawglyphfontspecs(&spec, g, numspecs, x, y, clean_background);
 }
 
 void
@@ -1712,6 +1710,10 @@ xdrawcursor(int cx, int cy, Glyph g, int ox, int oy, Glyph og, Line line, int le
 		case 0: /* Blinking Block */
 		case 1: /* Blinking Block (Default) */
 		case 2: /* Steady Block */
+			XftDrawRect(xw.draw, &drawcol,
+					borderpx + cx * win.cw,
+					borderpx + cy * win.ch + cursorshifty,
+					win.cw, cursorheight);
 			xdrawglyph(g, cx, cy, 0);
 			break;
 		case 3: /* Blinking Underline */
