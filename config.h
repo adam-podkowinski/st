@@ -5,7 +5,7 @@
  *
  * font: see http://freedesktop.org/software/fontconfig/fontconfig-user.html
  */
-static char *font = "JetBrainsMono Nerd Font:weight=SemiBold:pixelsize=16:antialias=true:autohint=true";
+static char *font = "JetBrainsMono Nerd Font:weight=SemiBold:pixelsize=15:antialias=true:autohint=true";
 static char *font2[] = {
   "Noto Color Emoji:pixelsize=14:antialias=true:autohint=true",
 };
@@ -31,7 +31,7 @@ char *vtiden = "\033[?6c";
 
 /* Kerning / character bounding-box multipliers */
 static float cwscale = 1;
-static float chscale = 1.4;
+static float chscale = 1.5;
 
 /*
  * word delimiter string
@@ -111,7 +111,7 @@ unsigned int tabspaces = 8;
 
 /* bg opacity */
 //float alpha = 0.98;
-float alpha = 1.00;
+float alpha = 0.95;
 
 /* Terminal colors (16 first used in escape sequence) */
 static const char *colorname[] = {
